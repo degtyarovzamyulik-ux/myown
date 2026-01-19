@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Симулятор таверни</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="tavern">
+      <header>
+        <h1>Симулятор таверни</h1>
+        <p>Наливайте пиво, поповнюйте запаси інгредієнтів та варіть нові партії.</p>
+      </header>
+
+      <section class="status">
+        <div class="stat-card">
+          <h2>Скарбничка</h2>
+          <p><span id="gold">0</span> золота</p>
+        </div>
+        <div class="stat-card">
+          <h2>Готове пиво</h2>
+          <p><span id="beer-stock">0</span> кухлів</p>
+        </div>
+        <div class="stat-card">
+          <h2>Інгредієнти</h2>
+          <ul>
+            <li>Зерно: <span id="grain">0</span></li>
+            <li>Хміль: <span id="hops">0</span></li>
+            <li>Дріжджі: <span id="yeast">0</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="card">
+          <h2>Поточний гість</h2>
+          <p class="npc-name" id="npc-name">—</p>
+          <p class="npc-order" id="npc-order">—</p>
+          <div class="button-row">
+            <button id="serve">Налити пиво</button>
+            <button id="dismiss" class="secondary">Відпустити</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Керування запасами</h2>
+          <p>Рецепт: 2 зерна + 1 хміль + 1 дріжджі = 1 кухоль пива.</p>
+          <div class="button-row">
+            <button id="brew">Зварити пиво</button>
+            <button id="buy" class="secondary">Купити інгредієнти</button>
+          </div>
+          <p class="note">Пакет інгредієнтів коштує 10 золота.</p>
+        </div>
+      </section>
+
+      <section class="log card">
+        <h2>Журнал подій</h2>
+        <ul id="log"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
