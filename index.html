@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Таверна JRPG — симулятор</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header class="title">
+        <h1>Таверна JRPG</h1>
+        <p>
+          Гра з видом зверху: керуй героєм, приймай замовлення, вари пиво та керуй
+          запасами.
+        </p>
+      </header>
+
+      <section class="game">
+        <div class="game-frame" role="img" aria-label="Сцена таверни з видом зверху">
+          <canvas id="tavern-canvas" width="960" height="540"></canvas>
+          <div class="hud">
+            <div>
+              <strong>Золото:</strong> <span id="gold">0</span>
+            </div>
+            <div>
+              <strong>Пиво:</strong> <span id="beer">0</span>
+            </div>
+            <div class="inventory">
+              <span>Зерно: <span id="grain">0</span></span>
+              <span>Хміль: <span id="hops">0</span></span>
+              <span>Дріжджі: <span id="yeast">0</span></span>
+            </div>
+          </div>
+          <div class="controls">
+            <span>Рух: WASD / стрілки</span>
+            <span>Взаємодія: E</span>
+          </div>
+        </div>
+
+        <aside class="panel">
+          <div class="card">
+            <h2>Поточний гість</h2>
+            <p id="guest-name">—</p>
+            <p id="guest-order">—</p>
+            <p class="helper">Підійди до барної стійки, щоб видати замовлення.</p>
+          </div>
+
+          <div class="card">
+            <h2>Станції таверни</h2>
+            <ul>
+              <li>🍺 Варильня — готувати пиво (2 зерна, 1 хміль, 1 дріжджі).</li>
+              <li>🧺 Комора — купити інгредієнти за 10 золота.</li>
+              <li>🛎️ Бар — видати пиво гостю.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Журнал подій</h2>
+            <ul id="log"></ul>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
